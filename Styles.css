@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #0b0b1d;
+  color: #f6f1dd;
+  font-family: Georgia, serif;
+  overflow-x: hidden;
+}
+
+.section {
+  min-height: 100vh;
+  padding: clamp(40px, 8vw, 100px) 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.intro {
+  background:
+    linear-gradient(rgba(9,7,22,0.85), rgba(9,7,22,0.85)),
+    url("img/fondo mobil.jpg");
+  background-size: cover;
+  background-position: center;
+}
+@media (min-width: 768px) {
+  .intro {
+    background:
+      linear-gradient(rgba(9,7,22,0.75), rgba(9,7,22,0.75)),
+      url("img/fondo pc.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+.sky {
+  background: #090716;
+}
+
+.lanterns {
+  background: linear-gradient(#090716, #1e1236);
+  position: relative;
+  overflow: hidden;
+}
+
+.heart {
+  background:  linear-gradient(rgba(9,7,22,0.75), rgba(9,7,22,0.75)), 
+  url("img/momento.jpg");
+  background-size: cover;
+    background-position: center;
+}
+
+.end {
+  background:
+    linear-gradient(rgba(9,7,22,0.85), rgba(9,7,22,0.85)),
+    url("img/fondo2\ movil.jpeg");
+  background-size: cover;
+  background-position: center;
+}
+@media (min-width: 768px) {
+  .end {
+    background:
+      linear-gradient(rgba(9,7,22,0.75), rgba(9,7,22,0.75)),
+      url("img/fondo2\ pc.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+h1 {
+  font-weight: normal;
+  margin-bottom: 15px;
+  font-size: clamp(1.6rem, 5vw, 2.5rem);
+}
+
+p {
+  max-width: 600px;
+  line-height: 1.6;
+  font-size: clamp(1rem, 4vw, 1.2rem);
+}
+
+.arrow {
+  margin-top: 30px;
+  font-size: 2rem;
+  opacity: 0.6;
+}
+
+/* Scroll reveal */
+.hidden {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1.8s ease, transform 1.8s ease;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Lanterns */
+.lantern {
+  position: absolute;
+  bottom: -40px;
+  width: 26px;
+  height: 38px;
+
+  background: url("img/linterna.png") no-repeat center;
+  background-size: contain;
+
+  animation: floatUp linear infinite;
+}
+@media (min-width: 768px) {
+.lantern{
+  width: 44px;
+  height: 54px;
+}
+}
+
+@keyframes floatUp {
+  from {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(-120vh);
+    opacity: 1;
+  }
+}
+
+/* Desktop refinement */
+@media (min-width: 768px) {
+  .section {
+    padding: 120px 40px;
+  }
+}
